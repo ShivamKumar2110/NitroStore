@@ -40,7 +40,44 @@
             </div>
         </div>
 
-        <!-- Code Here -->
+        <div class="nk-sidebar">
+            <div class="nav-user">
+                {% if datab %}
+                    <img src="{{ datab.url }}"  alt="" class="img-circle">
+                {% endif%}
+                {% if name %}
+                <h4>{{ name }}</h4>
+                {% endif %}
+                <p>
+                {% if usrname %}
+                {{ usrname }}
+                {% endif %}
+                </p>
+                <div class="nav-user-option">
+                </div>
+            </div>
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow" href="/nitro_wheels/edit" aria-expanded="false">
+                            <span class="nav-text">Edit Profile</span> 
+                        </a>
+                    </li>
+                    <br>
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false">
+                            <span class="nav-text">Your Order</span> 
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/nitro_wheels/bike/">Bikes</a>
+                            </li>
+                            <li><a href="/nitro_wheels/rep/">Repair Pair</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
 <!-- ############################ -->
         <div class="content-body">
             <div class="container-fluid" style="background-image:url({% static '/images/editback.jpg' %});">
